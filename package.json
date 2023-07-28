@@ -1,0 +1,17 @@
+{
+  "name": "sharedLibs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "node_modules/.bin/rimraf dist",
+    "build": "node_modules/.bin/tsc && npm run package",
+    "package": "cp package.json dist/ && cd dist && npm pack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6"
+  }
+}
